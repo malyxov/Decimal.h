@@ -13,6 +13,11 @@ clean:
 clang_test:
 	clang-format -n -style=Google *.c *.h
 
+s21_string.a:
+	${CC} ${FLAGS} ${NAME}/*.c
+	ar rc ${NAME}.a *.o
+	ranlib ${NAME}.a
+
 test:
 	${CC} ${FLAGS} -o ${NAME} *.c tests/*.c ${LIBS}
 	 ./${NAME}
