@@ -22,7 +22,7 @@ test:
 	${CC} ${FLAGS} -o ${NAME} *.c tests/*.c ${LIBS}
 	 ./${NAME}
 
-gcov_report: clean check
+gcov_report: clean test
 	gcov -o report.info -c -d .
 	lcov -t "${NAME}" -o report.info -c -q -d .
 	genhtml -o report report.info
