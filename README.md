@@ -9,7 +9,7 @@ implementation of the decimal.h library in the C programming language. This libr
   ```
 
 ## Makefile
-- `check` - компиляция и тесты (основная цель);
+- `test` - компиляция и тесты (основная цель);
 - `gcov_report` - покрытие кода (файл `index.html` в папке `.\report`);
 - `clang_test` - проверка стиля кода Google style;
 - `clean`- очистка каталога.
